@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Youtube
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col size="12" sizeMd="6" *ngFor="let channel of channels">
+
+        <ion-card button (click)="oncard(channel?.id)">
+          <img [src]="channel?.brandingSettings.image.bannerMobileImageUrl" alt="">
+
+          <ion-grid>
+            <ion-row class="ion-justify-content-start">
+
+              <ion-col size="4" class="ion-align-self-center">
+                <ion-avatar>
+                  <img [src]="channel?.snippet.thumbnails.default.url" />
+                </ion-avatar>
+              </ion-col>
+
+              <ion-col class="ion-align-self-center">
+                <ion-card-title>{{channel?.snippet.title}}</ion-card-title>
+                <ion-card-subtitle>{{channel?.snippet.description}}</ion-card-subtitle>
+              </ion-col>
+
+            </ion-row>
+            <ion-row>
+              <ion-col size="8" class="ion-align-self-flex-start">
+                <h5>Subscribers :</h5>
+                <h5>Videos :</h5>
+
+              </ion-col>
+              <ion-col size="4" class="ion-align-self-flex-start">
+                <h5>{{channel?.statistics.subscriberCount }}</h5>
+                <h5>{{channel?.statistics.videoCount }}</h5>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

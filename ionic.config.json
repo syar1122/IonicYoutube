@@ -1,0 +1,7 @@
+{
+  "name": "Youtube Channels",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

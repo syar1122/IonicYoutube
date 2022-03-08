@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sections</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" color="primary">
+    Click me
+  </ion-button>
+
+
+  <ion-card *ngIf="sectionsAllb">
+
+
+    <ion-item *ngFor="let item of sectionsAll | filterBy: ['snippet.title']: 'عەقیدە و مەنهەج' ">
+      <ion-label>{{item.snippet.title}}</ion-label>
+    </ion-item>
+  </ion-card>
+
+
+</ion-content>

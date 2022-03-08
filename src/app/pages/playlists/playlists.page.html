@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>playlists</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list color="danger">
+    <ion-item *ngFor="let item of playList">
+      <!-- <ion-thumbnail slot="start">
+        <img [src]="item.snippet.thumbnails.medium.url">
+      </ion-thumbnail> -->
+      <h1>{{item.snippet.title}}</h1><br>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
